@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <div class="HomepageText">
+        <h1>This is a clock</h1>
+    </div>
+    <div class="clock">
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+    </div>
+
+</head>
+<body>
+    <!--update the clock every second in real time using real time data from the user's device-->
+    <script>
+        function getRealTime() {
+            var now = moment();
+            var hour = now.format('hh');
+            var minute = now.format('mm');
+            var second = now.format('ss');
+            $('.hour').text(hour);
+            $('.minute').text(minute);
+            $('.second').text(second);
+        }
+        setInterval(getRealTime, 1000);
+
+        function moveHandClock() {
+            var now = moment();
+            var hour = now.format('hh');
+            var minute = now.format('mm');
+            var second = now.format('ss');
+            var hourAngle = (hour / 12) * 360 + (minute / 60) * 30;
+            var minuteAngle = (minute / 60) * 360 + (second / 60) * 6;
+            var secondAngle = (second / 60) * 360;
+            $('.hour').css('transform', 'rotate(' + hourAngle + 'deg)');
+            $('.minute').css('transform', 'rotate(' + minuteAngle + 'deg)');
+            $('.second').css('transform', 'rotate(' + secondAngle + 'deg)');
+        }
+        setInterval(moveHandClock, 1000);
+
+        
+    </script>
+
+    <div class="NumbersOnClock">
+        <div class="number1">1</div>
+        <div class="number2">2</div>
+        <div class="number3">3</div>
+        <div class="number4">4</div>
+        <div class="number5">5</div>
+        <div class="number6">6</div>
+        <div class="number7">7</div>
+        <div class="number8">8</div>
+        <div class="number9">9</div>
+        <div class="number10">10</div>
+        <div class="number11">11</div>
+        <div class="number12">12</div>
+    </div>
+
+    <div class="Calendar">
+        <div class="day"></div>
+        <div class="month"></div>
+        <div class="year"></div>
+        <script>
+            function getRealDate() {
+                var now = moment();
+                var day = now.format('DD');
+                var month = now.format('MM');
+                var year = now.format('YYYY');
+                $('.day').text(day);
+                $('.month').text(month);
+                $('.year').text(year);
+            }
+            setInterval(getRealDate, 1000);
+        </script>
+    </div>
+</body>
+<style></style>
+</html>

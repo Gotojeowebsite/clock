@@ -1,0 +1,122 @@
+body{
+background-color: #674736;
+
+}
+.HomepageText h1 {
+    font-style: bold;
+    color: aliceblue;
+    border: 5px solid #000000;
+    display: inline-block;
+    padding: 10px; 
+    
+} 
+.NumbersOnClock {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    position: absolute;
+}
+.NumbersOnClock:nth-child(1) { /* 12 o'clock */
+    top: 10px;
+    left: 90px;
+}
+.NumbersOnClock:nth-child(2) { /* 3 o'clock */
+    top: 90px;
+    left: 180px;
+}
+.NumbersOnClock:nth-child(3) { /* 6 o'clock */
+    top: 170px;
+    left: 90px;
+}
+.NumbersOnClock:nth-child(4) { /* 9 o'clock */
+    top: 90px;
+    left: 10px;
+}
+.NumbersOnClock:nth-child(5) { /* 12 o'clock */
+    top: 10px;
+    left: 90px;
+}
+.NumbersOnClock:nth-child(6) { /* 3 o'clock */
+    top: 90px;
+    left: 180px;
+}
+.NumbersOnClock:nth-child(7) { /* 6 o'clock */
+    top: 170px;
+    left: 90px;
+}
+.NumbersOnClock:nth-child(8) { /* 9 o'clock */
+    top: 90px;
+    left: 10px;
+}
+.NumbersOnClock:nth-child(9) { /* 12 o'clock */
+    top: 10px;
+    left: 90px;
+}
+.NumbersOnClock:nth-child(10) { /* 3 o'clock */
+    top: 90px;
+    left: 180px;
+}
+.NumbersOnClock:nth-child(11) { /* 6 o'clock */
+    top: 170px;
+    left: 90px;
+}
+.NumbersOnClock:nth-child(12) { /* 9 o'clock */
+    top: 90px;
+    left: 10px;
+}
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #000000;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+.hour, .minute, .second {
+    position: absolute;
+    background-color: #000000; 
+    border-radius: 5px;
+    transform-origin: 100% 100%;
+}
+.hour {
+    width: 6px;
+    height: 50px;
+    top: 50px;
+    left: 97px;
+}
+.minute {
+    width: 4px;
+    height: 70px;       
+    top: 30px;
+    left: 98px;
+}
+.second {
+    width: 2px;
+    height: 90px;       
+    top: 10px;
+    left: 99px;
+    background-color: red;
+}
+
+.Calendar {
+    margin: 20px auto;
+    width: 200px;
+    text-align: center;
+    font-size: 18px;
+    color: #000000;
+    set-border: 5px solid #000000;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+.Calendar h2 {
+    margin-bottom: 10px;
+}
+.Calendar p {
+    margin: 5px 0;
+}
+.Calendar .date {
+    font-size: 24px;
+    font-weight: bold;
+}
+
